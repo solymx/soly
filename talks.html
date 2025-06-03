@@ -37,6 +37,7 @@
 <h1 id="title">我的歷年資安演講</h1>
 
 <div class="controls">
+  <button onclick="location.href='index.html'"><span id="homeBtn" data-zh="← 返回首頁" data-en="← Back to Home">← 返回首頁</span></button>
   <input type="text" id="searchInput" placeholder="搜尋演講 / Search..." oninput="renderCards()" />
   <button onclick="switchLanguage()">切換語言 / Switch Language</button>
   <button onclick="downloadJSON()">下載 JSON</button>
@@ -404,11 +405,23 @@
 
   function switchLanguage(force = null) {
     isChinese = force !== null ? force : !isChinese;
+    
+    const homeBtn = document.getElementById("homeBtn");
+    if (homeBtn) {
+      homeBtn.innerText = isChinese ? homeBtn.getAttribute("data-zh") : homeBtn.getAttribute("data-en");
+    }
+
     renderCards();
   }
 
   function filterByTag(tag) {
     currentFilter = (currentFilter === tag) ? null : tag;
+    
+    const homeBtn = document.getElementById("homeBtn");
+    if (homeBtn) {
+      homeBtn.innerText = isChinese ? homeBtn.getAttribute("data-zh") : homeBtn.getAttribute("data-en");
+    }
+
     renderCards();
   }
 
