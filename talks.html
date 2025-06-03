@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>我的演講作品集 Talks</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; padding: 40px; margin: 0; }
+    h1 { text-align: center; color: #333; }
+    .controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 20px; }
+    .controls button, .controls input { padding: 8px 16px; border-radius: 5px; border: 1px solid #ccc; font-size: 0.95em; }
+    .controls button { background-color: #4a90e2; color: white; cursor: pointer; border: none; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+    .card { background-color: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); padding: 20px; transition: transform 0.2s ease; }
+    .card:hover { transform: scale(1.02); }
+    .cert-name { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; }
+    .issuer, .year, .agenda-link { color: #666; font-size: 0.9em; margin-bottom: 4px; display: block; }
+    .agenda-link { color: #4a90e2; text-decoration: none; }
+    .agenda-link:hover { text-decoration: underline; }
+    .tags { margin-top: 10px; }
+    .tag { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.8em; margin-right: 6px; cursor: pointer; color: white; }
+    .tag.active { box-shadow: 0 0 0 2px #555 inset; }
+    #card-container { transition: all 0.2s ease; }
+    #tagChart { max-width: 600px; margin: 40px auto 0; }
+    /* Tag Colors */
+    .tag.red { background-color: #e74c3c; } .tag.blue { background-color: #3498db; }
+    .tag.purple { background-color: #9b59b6; } .tag.teal { background-color: #1abc9c; }
+    .tag.orange { background-color: #e67e22; } .tag.green { background-color: #2ecc71; }
+    .tag.brown { background-color: #8e735b; } .tag.pink { background-color: #fd79a8; }
+    .tag.gold { background-color: #f39c12; }
+  </style>
+</head>
+<body>
+
+<h1 id="title">我的歷年資安演講</h1>
+
+<div class="controls">
+  <input type="text" id="searchInput" placeholder="搜尋演講 / Search..." oninput="renderCards()" />
+  <button onclick="switchLanguage()">切換語言 / Switch Language</button>
+  <button onclick="downloadJSON()">下載 JSON</button>
+  <button onclick="downloadPDF()">下載 PDF</button>
+</div>
+
+<div class="cards" id="card-container"></div>
+<canvas id="tagChart" width="400" height="400"></canvas>
+
+<script>
+  let isChinese = true;
+  let currentFilter = null;
+  let tagChartInstance = null;
+
+  const tagColorMap = {
+    "APT": "red", "CTF": "blue", "衛星資安": "purple", "Space Security": "purple",
+    "惡意程式分析": "teal", "Malware Analysis": "teal", "威脅情資": "orange",
+    "Threat Intelligence": "orange", "工控資安": "green", "OT Security": "green",
+    "封包分析": "brown", "Packet Analysis": "brown", "漏洞研究": "gold",
+    "Vulnerability Research": "gold", "自動化攻擊模擬": "pink", "Adversary Emulation": "pink"
+  };
+
+      const data = [
+  {
+    "name": {
+      "zh": "東亞衛星航太威脅研究：當龍與千里馬奔向星辰",
+      "en": "APTs in APAC aerospace: When Dragons and Chollimas Reach for the Stars"
+    },
+    "instances": [
+      {
+        "issuer": {
+          "zh": "CODE BLUE 日本",
+          "en": "CODE BLUE Japan"
+        },
+        "year": "2024",
+        "link": "https://archive.codeblue.jp/2024/en/results/results/"
+      },
+      {
+        "issuer": {
+          "zh": "Infosec In the City, SINCON",
+          "en": "Infosec In the City, SINCON"
+        },
+        "year": "2025",
+        "link": "https://www.infosec-city.com/schedule/sin25-con"
+      }
+    ],
+    "tags": [
+      {
+        "zh": "惡意程式分析",
+        "en": "Malware Analysis"
+      },
+      {
+        "zh": "APT",
+        "en": "APT"
+      },
+      {
+        "zh": "威脅情資",
+        "en": "Threat Intelligence"
+      }
+    ]
+  },
+  {
+    "name": {
+      "zh": "數位星塵中的暗流：從虛擬戰場探尋太空安全的未來",
+      "en": "Dark Currents in Digital Stardust: Exploring the Future of Space Security from the Virtual Battlefield"
+    },
+    "instances": [
+      {
+        "issuer": {
+          "zh": "台灣資安大會",
+          "en": "CyberSec (ITHOME)"
+        },
+        "year": "2025",
+        "link": "https://cybersec.ithome.com.tw/2025/session-page/3496"
+      }
+    ],
+    "tags": [
+      {
+        "zh": "CTF",
+        "en": "CTF"
+      },
+      {
+        "zh": "衛星資安",
+        "en": "Space Security"
+      }
+    ]
+  },
+{
+  "name": {
+    "zh": "工廠中的紅色閃光 - 從 0 到 100 的自動化攻擊模擬檢測",
+    "en": "Red light in the factory - From 0 to 100 OT adversary emulation (Scarlet OT – OT Adversary Emulation for Fun and Profit)"
+  },
+  "instances": [
+    {
+      "issuer": {
+        "zh": "亞太區電腦事件協調組織(APCERT)",
+        "en": "APCERT"
+      },
+      "year": "2024",
+      "link": "https://www.apcert.org/"
+    },
+    {
+      "issuer": {
+        "zh": "ROOTCON ® 17",
+        "en": "ROOTCON ® 17"
+      },
+      "year": "2023",
+      "link": "https://www.youtube.com/watch?v=60AOaHKeRfY"
+    },
+    {
+      "issuer": {
+        "zh": "台灣資安大會",
+        "en": "CyberSec (ITHOME)"
+      },
+      "year": "2023",
+      "link": "https://cybersec.ithome.com.tw/2023/speaker-page/21"
+    },
+    {
+      "issuer": {
+        "zh": "HITBSecConf - Phuket",
+        "en": "HITBSecConf - Phuket"
+      },
+      "year": "2023",
+      "link": "https://conference.hitb.org/hitbsecconf2023hkt/session/scarlet-ot-ot-adversary-emulation-for-fun-and-profit/"
+    },
+    {
+      "issuer": {
+        "zh": "CODE BLUE 日本",
+        "en": "CODE BLUE Japan"
+      },
+      "year": "2022",
+      "link": "https://archive.codeblue.jp/2022/en/talks/?content=talks_14"
+    },
+    {
+      "issuer": {
+        "zh": "Red x Blue Pill , 泰國曼谷",
+        "en": "Red x Blue Pill , 2600Thailand"
+      },
+      "year": "2022",
+      "link": "https://www.eventpop.me/e/13821"
+    }
+  ],
+  "tags": [
+    {
+      "zh": "惡意程式分析",
+      "en": "Malware Analysis"
+    },
+    {
+      "zh": "工控資安",
+      "en": "OT Security"
+    },
+    {
+      "zh": "封包分析",
+      "en": "Packet Analysis"
+    },
+    {
+      "zh": "自動化攻擊模擬",
+      "en": "Adversary Emulation"
+    },
+    {
+      "zh": "威脅情資",
+      "en": "Threat Intelligence"
+    }
+  ]
+},
+{
+  "name": {
+    "zh": "揭露 ModSAT：伊朗針對衛星航太產業的祕密行動",
+    "en": "Decoding ModSAT: Iran's Covert Campaign Against Satellite Communication Firms"
+  },
+  "instances": [
+    {
+      "issuer": {
+        "zh": "BlackHAT MEA",
+        "en": "BlackHAT MEA"
+      },
+      "year": "2024",
+      "link": "https://attend.blackhatevents.virtual.informatech.com/event/black-hat-mea-2024/planning/UGxhbm5pbmdfMjE5MzU5Ng=="
+    }
+  ],
+  "tags": [
+    {
+      "zh": "惡意程式分析",
+      "en": "Malware Analysis"
+    },
+    {
+      "zh": "威脅情資",
+      "en": "Threat Intelligence"
+    }
+  ]
+},
+{
+  "name": {
+    "zh": "從理論到實踐：ATT&CK ICS 之旅",
+    "en": "From Theory to Practice: The ATT&CK for ICS Journey"
+  },
+  "instances": [
+    {
+      "issuer": {
+        "zh": "台灣資安大會",
+        "en": "Cybersec (ITHOME)"
+      },
+      "year": "2021",
+      "link": "https://cybersec.ithome.com.tw/2021/session-page/63"
+    }
+  ],
+  "tags": [
+    {
+      "zh": "封包分析",
+      "en": "Packet Analysis"
+    },
+    {
+      "zh": "自動化攻擊模擬",
+      "en": "Adversary Emulation"
+    },
+    {
+      "zh": "漏洞研究",
+      "en": "Vulnerability Research"
+    },
+    {
+      "zh": "工控資安",
+      "en": "OT Security"
+    }
+  ]
+},
+{
+  "name": {
+    "zh": "應用於未知的工業控制協定上異常行為偵測",
+    "en": "Anomaly Detection for Unknown Industrial Control Protocols"
+  },
+  "instances": [
+    {
+      "issuer": {
+        "zh": "台灣資安大會",
+        "en": "Cybersec (ITHOME)"
+      },
+      "year": "2021",
+      "link": "https://cybersec.ithome.com.tw/2021/session-page/65"
+    }
+  ],
+  "tags": [
+    {
+      "zh": "封包分析",
+      "en": "Packet Analysis"
+    },
+    {
+      "zh": "工控資安",
+      "en": "OT Security"
+    }
+  ]
+}
+];
+
+
+  function renderCards() {
+    const container = document.getElementById("card-container");
+    const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
+    container.innerHTML = "";
+
+    data.forEach(cert => {
+      const displayName = isChinese ? cert.name.zh : cert.name.en;
+      const displayTags = cert.tags.map(tag => isChinese ? tag.zh : tag.en);
+      const allYears = [...new Set(cert.instances.map(inst => inst.year))];
+      const allTags = [...displayTags, ...allYears];
+
+      const showByTag = !currentFilter || allTags.includes(currentFilter);
+      const showByKeyword = !keyword || displayName.toLowerCase().includes(keyword);
+
+      if (!(showByTag && showByKeyword)) return;
+
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const tagSpans = [
+        ...cert.tags.map(tag => {
+          const label = isChinese ? tag.zh : tag.en;
+          const colorClass = tagColorMap[label] || "";
+          const isActive = currentFilter === label ? "active" : "";
+          return '<span class="tag ' + colorClass + ' ' + isActive + '" onclick="filterByTag(\'' + label + '\')">' + label + '</span>';
+        }),
+        ...allYears.map(year => {
+          const isActive = currentFilter === year ? "active" : "";
+          return '<span class="tag ' + isActive + '" style="background-color:#888;" onclick="filterByTag(\'' + year + '\')">' + year + '</span>';
+        })
+      ].join("");
+
+      const instanceDetails = cert.instances.map(inst => {
+        const issuer = isChinese ? inst.issuer.zh : inst.issuer.en;
+        const link = inst.link ? `<a class="agenda-link" href="${inst.link}" target="_blank">${isChinese ? '🔗 前往議程' : '🔗 View Agenda'}</a>` : '';
+        return `<div class="issuer">${issuer}</div><div class="year">${isChinese ? '年份：' : 'Year: '}${inst.year}</div>${link}`;
+      }).join("<hr style='margin: 8px 0;'>");
+
+      card.innerHTML = `
+        <div class="cert-name">${displayName}</div>
+        ${instanceDetails}
+        <div class="tags">${tagSpans}</div>
+      `;
+
+      container.appendChild(card);
+    });
+
+    document.getElementById("title").textContent = isChinese ? "我的歷年資安演講" : "My Cybersecurity Presentations";
+    renderChart();
+  }
+
+  function renderChart() {
+    const tagCount = {};
+    data.forEach(cert => {
+      cert.tags.forEach(tag => {
+        const label = isChinese ? tag.zh : tag.en;
+        tagCount[label] = (tagCount[label] || 0) + 1;
+      });
+    });
+
+    const labels = Object.keys(tagCount);
+    const counts = Object.values(tagCount);
+
+    const backgroundColors = labels.map(label => {
+      const className = tagColorMap[label];
+      const temp = document.createElement('span');
+      temp.className = 'tag ' + className;
+      document.body.appendChild(temp);
+      const bgColor = getComputedStyle(temp).backgroundColor;
+      temp.remove();
+      return bgColor || '#ccc';
+    });
+
+    if (tagChartInstance) tagChartInstance.destroy();
+
+    const ctx = document.getElementById('tagChart').getContext('2d');
+    tagChartInstance = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: counts,
+          backgroundColor: backgroundColors,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          datalabels: {
+            formatter: (value, context) => {
+              const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+              return (value / total * 100).toFixed(1) + '%';
+            },
+            color: '#fff',
+            font: {
+              weight: 'bold'
+            }
+          },
+          legend: {
+            position: 'bottom'
+          },
+          title: {
+            display: true,
+            text: isChinese ? '主題分布圓餅圖' : 'Tag Distribution Pie Chart'
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+  }
+
+  function switchLanguage(force = null) {
+    isChinese = force !== null ? force : !isChinese;
+    renderCards();
+  }
+
+  function filterByTag(tag) {
+    currentFilter = (currentFilter === tag) ? null : tag;
+    renderCards();
+  }
+
+  function downloadJSON() {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "talks.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function downloadPDF() {
+    const element = document.getElementById("card-container");
+    const opt = {
+      margin: 0.5,
+      filename: 'talks.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().from(element).set(opt).save();
+  }
+
+  window.onload = function () {
+    const userLang = navigator.language || navigator.userLanguage;
+    switchLanguage(userLang.startsWith('zh'));
+  };
+</script>
+
+</body>
+</html>
