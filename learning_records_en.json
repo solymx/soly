@@ -30,14 +30,14 @@
     "Record Link": "https://example.com/record/3"
   },
   {
-    "Title": "Mastering Reverse Engineering",
-    "Type": "Udemy 課程",
-    "Topic": "惡意程式分析",
-    "Platform / Publisher": "Coursera",
-    "Completion Date": "2025-03",
-    "Key Learnings": "Learned to use AWS IAM 進行惡意程式分析 for practical analysis and application in security.。",
-    "Tools / Technologies": "AWS IAM, CloudTrail",
-    "Record Link": "https://example.com/record/3"
+    "Title": "EC-Council CEH (CEH 13)",
+    "Type": "Course",
+    "Topic": "Red Team – Ethical Hacking",
+    "Platform / Publisher": "EC-Council",
+    "Completion Date": "2024-08",
+    "Key Learnings": "Learned ethical hacking tools, attack vectors, and defense strategies to identify and fix security vulnerabilities",
+    "Tools / Technologies": "NMAP, Shodan, Metasploit, Hydra, SQLmap, Wfuzz, BurpSuite",
+    "Record Link": "https://example.com/record/4"
   },
   {
     "Title": "Ethereum Smart Contract Security",
