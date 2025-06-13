@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>求職作品集首頁</title>
+  <style>
+    body {
+      background-color: #fff8f0;
+      color: #4b3e2a;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #6b4e36;
+    }
+    .lang-toggle {
+      margin-bottom: 30px;
+    }
+    .lang-toggle button {
+      background-color: #fddbb0;
+      color: #4b3e2a;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      margin: 0 5px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .lang-toggle button:hover {
+      background-color: #fbc982;
+    }
+    .nav-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-cards a {
+      background-color: #fff0da;
+      padding: 20px;
+      border-radius: 16px;
+      color: #4b3e2a;
+      text-align: center;
+      text-decoration: none;
+      width: 220px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      font-size: 1.1em;
+    }
+    .nav-cards a:hover {
+      transform: scale(1.05);
+      background-color: #ffe9c6;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">🐾 My Backend Portfolio</h1>
+  <div class="lang-toggle">
+    <button onclick="setLang('zh')">中文</button>
+    <button onclick="setLang('en')">English</button>
+  </div>
+  <div class="nav-cards">
+    <a href="projects.html"><span data-zh="🐱<br>專案實作" data-en="🐱<br>Projects">🐱<br>專案實作</span></a>
+    <a href="certs.html"><span data-zh="🐾<br>證照紀錄" data-en="🐾<br>Certifications">🐾<br>證照紀錄</span></a>
+    <a href="study.html"><span data-zh="🧶<br>進修紀錄" data-en="🧶<br>Study Tracker">🧶<br>進修紀錄</span></a>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('title').innerText = lang === 'zh' ? '🐾 我的後端求職作品集' : '🐾 My Backend Portfolio';
+      document.querySelectorAll('.nav-cards span').forEach(span => {
+        span.innerHTML = span.getAttribute('data-' + lang);
+      });
+    }
+  setLang('en');
+  </script>
+</body>
+</html>
