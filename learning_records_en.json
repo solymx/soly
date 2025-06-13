@@ -40,14 +40,14 @@
     "Record Link": "https://example.com/record/4"
   },
   {
-    "Title": "Ethereum Smart Contract Security",
-    "Type": "Udemy 課程",
-    "Topic": "Python開發",
-    "Platform / Publisher": "Udemy",
-    "Completion Date": "2025-01",
-    "Key Learnings": "Learned to use Ghidra 進行Python開發 for practical analysis and application in security.。",
-    "Tools / Technologies": "Ghidra, PE-bear",
-    "Record Link": "https://example.com/record/4"
+    "Title": "Targeted malware reverse engineering",
+    "Type": "Course",
+    "Topic": "Blue Team - Malware Analysis",
+    "Platform / Publisher": "Kaspersky expert training",
+    "Completion Date": "2021-06",
+    "Key Learnings": "Analyze ten real-world APT malware cases using tools such as IDA Pro in a hands-on setting.",
+    "Tools / Technologies": "IDA Pro, x64dbg",
+    "Record Link": "https://example.com/record/5"
   },
   {
     "Title": "Python for Security Engineers",
