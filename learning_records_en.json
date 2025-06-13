@@ -40,6 +40,16 @@
     "Record Link": "https://example.com/record/4"
   },
   {
+    "Title": "Advanced malware analysis techniques",
+    "Type": "Course",
+    "Topic": "Blue Team - Malware Analysis",
+    "Platform / Publisher": "Kaspersky expert training",
+    "Completion Date": "2022-03",
+    "Key Learnings": "Analyze real APT samples and automate decryption frameworks.",
+    "Tools / Technologies": "IDA Pro, x64dbg",
+    "Record Link": "https://example.com/record/5"
+  },
+  {
     "Title": "Targeted malware reverse engineering",
     "Type": "Course",
     "Topic": "Blue Team - Malware Analysis",
