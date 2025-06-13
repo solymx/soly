@@ -1,12 +1,12 @@
 [
   {
-    "Title": "Advanced Malware Analysis",
-    "Type": "Udemy 課程",
-    "Topic": "雲端安全",
-    "Platform / Publisher": "Pluralsight",
-    "Completion Date": "2025-04",
-    "Key Learnings": "Learned to use AWS IAM 進行雲端安全 for practical analysis and application in security.。",
-    "Tools / Technologies": "AWS IAM, CloudTrail",
+    "Title": "GCP ACE Google Associate Cloud Engineer Practice Test Exam",
+    "Type": "Quiz Materials",
+    "Topic": "Cloud",
+    "Platform / Publisher": "Udemy",
+    "Completion Date": "2025-06",
+    "Key Learnings": "Get familiar with potential exam questions through practice, each with detailed explanations.",
+    "Tools / Technologies": "GCP",
     "Record Link": "https://example.com/record/1"
   },
   {
