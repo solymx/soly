@@ -60,6 +60,16 @@
     "Record Link": "https://example.com/record/5"
   },
   {
+    "Title": "Network Security of Packet Analysis Course (NSPA)",
+    "Type": "Course",
+    "Topic": "Blue Team - Threat Hunting",
+    "Platform / Publisher": "Taiwanese Network Traffic Packets Analysis Association",
+    "Completion Date": "2022-03",
+    "Key Learnings": "Learned to identify common network attacks like DoS using Wireshark, improving my practical traffic analysis skills.",
+    "Tools / Technologies": "Wireshark",
+    "Record Link": "https://example.com/record/5"
+  },
+  {
     "Title": "Advanced malware analysis techniques",
     "Type": "Course",
     "Topic": "Blue Team - Malware Analysis",
