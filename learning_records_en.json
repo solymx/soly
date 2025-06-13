@@ -40,6 +40,16 @@
     "Record Link": "https://example.com/record/4"
   },
   {
+    "Title": "Hunt APTs with Yara like a GReAT ninja",
+    "Type": "Course",
+    "Topic": "Blue Team - Threat Hunting",
+    "Platform / Publisher": "Kaspersky expert training",
+    "Completion Date": "2022-09",
+    "Key Learnings": "Hands-on course that deepened my skills in APT threat hunting using YARA.",
+    "Tools / Technologies": "YARA Rule",
+    "Record Link": "https://example.com/record/5"
+  },
+  {
     "Title": "Advanced malware analysis techniques",
     "Type": "Course",
     "Topic": "Blue Team - Malware Analysis",
