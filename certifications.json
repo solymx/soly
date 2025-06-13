@@ -1,0 +1,113 @@
+[
+  {
+    "name": {
+      "zh": "Google Certified Associate Cloud Engineer",
+      "en": "Google Certified Associate Cloud Engineer"
+    },
+    "issuer": {
+      "zh": "Google Cloud",
+      "en": "Google Cloud"
+    },
+    "year": "2025",
+    "tags": [
+      {
+        "zh": "雲端",
+        "en": "Cloud"
+      }
+    ],
+    "links": {
+      "course": "https://cloud.google.com/learn/certification/cloud-engineer",
+      "review": "https://example.com/review",
+      "certificate": "https://example.com/certificate"
+    }
+  },
+  {
+    "name": {
+      "zh": "駭客技術專家認證課程（CEH）",
+      "en": "Certified Ethical Hacker (CEH)"
+    },
+    "issuer": {
+      "zh": "EC-Council",
+      "en": "EC-Council"
+    },
+    "year": "2024",
+    "tags": [
+      {
+        "zh": "紅隊",
+        "en": "Red Team"
+      }
+    ],
+    "links": {
+      "course": "https://example.com/course",
+      "review": "https://example.com/review",
+      "certificate": "https://example.com/certificate"
+    }
+  },
+  {
+    "name": {
+      "zh": "資安鑑識調查專家認證課程（CHFI）",
+      "en": "Computer Hacking Forensic Investigator (CHFI)"
+    },
+    "issuer": {
+      "zh": "EC-Council",
+      "en": "EC-Council"
+    },
+    "year": "2022",
+    "tags": [
+      {
+        "zh": "藍隊",
+        "en": "Blue Team"
+      }
+    ],
+    "links": {
+      "course": "https://example.com/course",
+      "review": "https://example.com/review",
+      "certificate": "https://example.com/certificate"
+    }
+  },
+  {
+    "name": {
+      "zh": "網路安全封包分析進階實作（ANSPA）",
+      "en": "Advanced Network Security Packet Analysis (ANSPA)"
+    },
+    "issuer": {
+      "zh": "中華民國網路封包分析協會",
+      "en": "Taiwan Network Packet Analysis Association"
+    },
+    "year": "2022",
+    "tags": [
+      {
+        "zh": "藍隊",
+        "en": "Blue Team"
+      }
+    ],
+    "links": {
+      "course": "https://example.com/course",
+      "review": "https://example.com/review",
+      "certificate": "https://example.com/certificate"
+    }
+  },
+  
+  {
+    "name": {
+      "zh": "網路安全封包分析認證課程（NSPA）",
+      "en": "Network Security Packet Analysis (NSPA)"
+    },
+    "issuer": {
+      "zh": "中華民國網路封包分析協會",
+      "en": "Taiwan Network Packet Analysis Association"
+    },
+    "year": "2022",
+    "tags": [
+      {
+        "zh": "藍隊",
+        "en": "Blue Team"
+      }
+    ],
+    "links": {
+      "course": "https://example.com/course",
+      "review": "https://example.com/review",
+      "certificate": "https://example.com/certificate"
+    }
+  }
+]
