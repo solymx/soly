@@ -1,5 +1,15 @@
 [
   {
+    "Title": "SOC200: Foundational Security Operations and Defensive Analysis",
+    "Type": "Course",
+    "Topic": "Blue Team - SOC",
+    "Platform / Publisher": "OffSec",
+    "Completion Date": "2025-07",
+    "Key Learnings": "Learn to detect, analyze, and respond to threats in a SOC environment.",
+    "Tools / Technologies": "Splunk, ELK, Zeek, Suricata, Windows Event Log",
+    "Record Link": "https://example.com/record/2"
+  },
+  {
     "Title": "GCP ACE Google Associate Cloud Engineer Practice Test Exam",
     "Type": "Quiz Materials",
     "Topic": "Cloud",
