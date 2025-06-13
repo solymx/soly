@@ -20,14 +20,14 @@
     "Record Link": "https://example.com/record/1"
   },
   {
-    "Title": "Complete Web Hacking Course",
-    "Type": "Udemy 課程",
-    "Topic": "逆向工程",
-    "Platform / Publisher": "Udemy",
+    "Title": "Google Cloud Associate Cloud Engineer Certification and Implementation Guide",
+    "Type": "Book",
+    "Topic": "Cloud",
+    "Platform / Publisher": "Packt Publishing",
     "Completion Date": "2025-05",
-    "Key Learnings": "Learned to use IDA Pro 進行逆向工程 for practical analysis and application in security.。",
-    "Tools / Technologies": "IDA Pro, x64dbg",
-    "Record Link": "https://example.com/record/2"
+    "Key Learnings": "Comprehensive guide for mastering GCP and passing the Associate Cloud Engineer exam.",
+    "Tools / Technologies": "GCP ACE",
+    "Record Link": "https://example.com/record/3"
   },
   {
     "Title": "Mastering Reverse Engineering",
