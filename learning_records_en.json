@@ -50,6 +50,16 @@
     "Record Link": "https://example.com/record/5"
   },
   {
+    "Title": "Network Security of Packet Analysis-Case Study (CNSPA)",
+    "Type": "Course",
+    "Topic": "Blue Team - Threat Hunting",
+    "Platform / Publisher": "Taiwanese Network Traffic Packets Analysis Association",
+    "Completion Date": "2022-04",
+    "Key Learnings": "Gained hands-on experience analyzing real-world malicious network traffic using Wireshark to investigate attacker activity.",
+    "Tools / Technologies": "Wireshark",
+    "Record Link": "https://example.com/record/5"
+  },
+  {
     "Title": "Advanced malware analysis techniques",
     "Type": "Course",
     "Topic": "Blue Team - Malware Analysis",
