@@ -10,6 +10,16 @@
     "Record Link": "https://example.com/record/2"
   },
   {
+    "Title": "Malware Analysis Of Malicious Documents",
+    "Type": "Course",
+    "Topic": "Blue Team - Malware Analysis",
+    "Platform / Publisher": "Udemy",
+    "Completion Date": "2025-06",
+    "Key Learnings": "Learned malware analysis through a case: PDF, DOCX, JS, and VBA",
+    "Tools / Technologies": "peepdf, oletools, ViperMonkey",
+    "Record Link": "https://github.com/solymx/Malware-Analysis-Learning/tree/main/udemy/mal_document"
+  },
+  {
     "Title": "GCP ACE Google Associate Cloud Engineer Practice Test Exam",
     "Type": "Quiz Materials",
     "Topic": "Cloud",
