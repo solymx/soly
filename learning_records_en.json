@@ -10,6 +10,16 @@
     "Record Link": "https://example.com/record/2"
   },
   {
+    "Title": "EC-Council Cybersecurity Expert Program (CND + CEH + CHFI)(端點駭客攻防及偵測回應警訊)",
+    "Type": "Course",
+    "Topic": "Blue Team",
+    "Platform / Publisher": "EC-Council",
+    "Completion Date": "2025-06",
+    "Key Learnings": "Comprehensive training in cyber defense, ethical hacking, and forensics",
+    "Tools / Technologies": "Splunk, ELK, Metasploit, Wireshark",
+    "Record Link": "https://example.com"
+  },
+  {
     "Title": "Malware Analysis Of Malicious Documents",
     "Type": "Course",
     "Topic": "Blue Team - Malware Analysis",
