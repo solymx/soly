@@ -10,6 +10,16 @@
     "Record Link": "https://example.com/record/2"
   },
   {
+    "Title": "Practical Industrial Control System Penetration Testing",
+    "Type": "Course",
+    "Topic": "OT Security",
+    "Platform / Publisher": "Udemy",
+    "Completion Date": "2025-06",
+    "Key Learnings": "Learning practical ICS pentesting",
+    "Tools / Technologies": "Shodan, Google Hacking",
+    "Record Link": "https://solymx.github.io/soly/data/udemy_certs/Practical%20Industrial%20Control%20System%20Penetration%20Testing.jpg"
+  },
+  {
     "Title": "Fundamentals of OT Cybersecurity (ICS/SCADA)",
     "Type": "Course",
     "Topic": "OT Security",
