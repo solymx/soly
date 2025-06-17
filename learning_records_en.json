@@ -10,6 +10,16 @@
     "Record Link": "https://example.com/record/2"
   },
   {
+    "Title": "Fundamentals of OT Cybersecurity (ICS/SCADA)",
+    "Type": "Course",
+    "Topic": "OT Security",
+    "Platform / Publisher": "Udemy",
+    "Completion Date": "2025-06",
+    "Key Learnings": "Learning the fundamentals of industrial control system (ICS) cybersecurity",
+    "Tools / Technologies": "modbus",
+    "Record Link": "https://solymx.github.io/soly/data/udemy_certs/Fundamentals%20of%20OT%20Cybersecurity.jpg"
+  },
+  {
     "Title": "EC-Council Cybersecurity Expert Program (CND + CEH + CHFI)(端點駭客攻防及偵測回應警訊)",
     "Type": "Course",
     "Topic": "Blue Team",
