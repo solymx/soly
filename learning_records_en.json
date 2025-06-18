@@ -70,6 +70,16 @@
     "Record Link": "https://example.com/record/3"
   },
   {
+    "Title": "Hack_the Orbit_Interactive_Satellite CTF_Workshop",
+    "Type": "Online Workshop",
+    "Topic": "Satellite Security",
+    "Platform / Publisher": "Cybernetix Academy",
+    "Completion Date": "2024-11",
+    "Key Learnings": "An introduction to basic satellite knowledge, covering space mathematics, satellite protocols, and the types of challenges currently found in CTFs.",
+    "Tools / Technologies": "CCSDS, Space Math",
+    "Record Link": "https://example.com/record/4"
+  },
+  {
     "Title": "2024 APCERT & FIRST Training Day  - MITRE ATLAS: Mapping AI Threats and Navigating Incident Sharing",
     "Type": "Course",
     "Topic": "AI",
