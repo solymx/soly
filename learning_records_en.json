@@ -70,6 +70,16 @@
     "Record Link": "https://example.com/record/3"
   },
   {
+    "Title": "2024 APCERT & FIRST Training Day  - MITRE ATLAS: Mapping AI Threats and Navigating Incident Sharing",
+    "Type": "Course",
+    "Topic": "AI",
+    "Platform / Publisher": "FIRST",
+    "Completion Date": "2024-11",
+    "Key Learnings": "Sharing a mapping of a malware case using MITRE ATLAS",
+    "Tools / Technologies": "MITRE ATLAS",
+    "Record Link": "https://example.com/record/4"
+  },
+  {
     "Title": "EC-Council CEH (CEH 13)",
     "Type": "Course",
     "Topic": "Red Team – Ethical Hacking",
@@ -128,95 +138,5 @@
     "Key Learnings": "Analyze ten real-world APT malware cases using tools such as IDA Pro in a hands-on setting.",
     "Tools / Technologies": "IDA Pro, x64dbg",
     "Record Link": "https://example.com/record/5"
-  },
-  {
-    "Title": "Python for Security Engineers",
-    "Type": "Udemy 課程",
-    "Topic": "滲透測試",
-    "Platform / Publisher": "Udemy",
-    "Completion Date": "2025-02",
-    "Key Learnings": "Learned to use IDA Pro 進行滲透測試 for practical analysis and application in security.。",
-    "Tools / Technologies": "IDA Pro, x64dbg",
-    "Record Link": "https://example.com/record/5"
-  },
-  {
-    "Title": "AWS Security Essentials",
-    "Type": "書籍",
-    "Topic": "社交工程",
-    "Platform / Publisher": "書籍",
-    "Completion Date": "2025-01",
-    "Key Learnings": "Learned to use Burp Suite 進行社交工程 for practical analysis and application in security.。",
-    "Tools / Technologies": "Burp Suite, sqlmap",
-    "Record Link": "https://example.com/record/6"
-  },
-  {
-    "Title": "Social Engineering and Human Hacking",
-    "Type": "Udemy 課程",
-    "Topic": "社交工程",
-    "Platform / Publisher": "Coursera",
-    "Completion Date": "2025-04",
-    "Key Learnings": "Learned to use IDA Pro 進行社交工程 for practical analysis and application in security.。",
-    "Tools / Technologies": "IDA Pro, x64dbg",
-    "Record Link": "https://example.com/record/7"
-  },
-  {
-    "Title": "Practical Binary Exploitation",
-    "Type": "線上課程",
-    "Topic": "惡意程式分析",
-    "Platform / Publisher": "Hack The Box",
-    "Completion Date": "2025-01",
-    "Key Learnings": "Learned to use Remix IDE 進行惡意程式分析 for practical analysis and application in security.。",
-    "Tools / Technologies": "Remix IDE, Mythril",
-    "Record Link": "https://example.com/record/8"
-  },
-  {
-    "Title": "Cloud Security with Azure",
-    "Type": "書籍",
-    "Topic": "Python開發",
-    "Platform / Publisher": "書籍",
-    "Completion Date": "2025-02",
-    "Key Learnings": "Learned to use Ghidra 進行Python開發 for practical analysis and application in security.。",
-    "Tools / Technologies": "Ghidra, PE-bear",
-    "Record Link": "https://example.com/record/9"
-  },
-  {
-    "Title": "Introduction to Blockchain Development",
-    "Type": "線上課程",
-    "Topic": "滲透測試",
-    "Platform / Publisher": "O'Reilly",
-    "Completion Date": "2025-06",
-    "Key Learnings": "Learned to use AWS IAM 進行滲透測試 for practical analysis and application in security.。",
-    "Tools / Technologies": "AWS IAM, CloudTrail",
-    "Record Link": "https://example.com/record/10"
-  },
-  {
-    "Title": "Network Security Fundamentals",
-    "Type": "Udemy 課程",
-    "Topic": "雲端安全",
-    "Platform / Publisher": "Pluralsight",
-    "Completion Date": "2025-01",
-    "Key Learnings": "Learned to use Flask 進行雲端安全 for practical analysis and application in security.。",
-    "Tools / Technologies": "Flask, Requests",
-    "Record Link": "https://example.com/record/11"
-  },
-  {
-    "Title": "Zero-Day Analysis Techniques",
-    "Type": "Udemy 課程",
-    "Topic": "區塊鏈安全",
-    "Platform / Publisher": "Udemy",
-    "Completion Date": "2025-01",
-    "Key Learnings": "Learned to use IDA Pro 進行區塊鏈安全 for practical analysis and application in security.。",
-    "Tools / Technologies": "IDA Pro, x64dbg",
-    "Record Link": "https://example.com/record/12"
-  },
-  {
-    "Title": "Real-World Penetration Testing",
-    "Type": "書籍",
-    "Topic": "區塊鏈安全",
-    "Platform / Publisher": "書籍",
-    "Completion Date": "2025-05",
-    "Key Learnings": "Learned to use Maltego 進行區塊鏈安全 for practical analysis and application in security.。",
-    "Tools / Technologies": "Maltego, theHarvester",
-    "Record Link": "https://example.com/record/13"
   }
 ]
