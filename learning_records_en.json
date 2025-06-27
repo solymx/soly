@@ -10,6 +10,16 @@
     "Record Link": "https://example.com/record/2"
   },
   {
+    "Title": "Security Monitoring with Wazuh",
+    "Type": "Book",
+    "Topic": "Blue Team - SOC",
+    "Platform / Publisher": "Packt Publishing",
+    "Completion Date": "2025-07",
+    "Key Learnings": "Learn to detect, analyze, and respond to threats in a SOC environment.",
+    "Tools / Technologies": "Splunk, ELK, Zeek, Suricata, Windows Event Log",
+    "Record Link": "https://example.com/record/2"
+  },
+  {
     "Title": "Practical Industrial Control System Penetration Testing",
     "Type": "Course",
     "Topic": "OT Security",
