@@ -1,0 +1,26 @@
+[
+  {
+    "Case Title": "CTF - Suspicious qcow2 Analysis",
+    "Evidence Source": "qcow2 image",
+    "Analysis Summary": "Mounted the qcow image, extracted and reviewed Windows Event Logs, identified a suspicious PyInstaller-packed executable.",
+    "Key Finding": "Discovered a malicious script uploading data to Sepolia blockchain.",
+    "Chain of Custody": "Mounted image using qemu-nbd, analyzed logs via Event Viewer and processed executable using PyInstaller extractor.",
+    "Blockchain Evidence": "Transaction on Sepolia blockchain observed with data exfiltration pattern.",
+    "Tools Used": "qemu-nbd, Event Viewer, PyInstaller Extractor",
+    "Tags": "CTF, Forensics, Blockchain, Malware",
+    "Analyst Report Link": "https://example.com/ctf-qcow2-analysis-report",
+    "Investigation Date": "2025-07-03"
+  },
+  {
+    "Case Title": "Incident Response - Office Phishing PDF",
+    "Evidence Source": "Email attachment (PDF)",
+    "Analysis Summary": "Investigated a suspicious email with a PDF lure. The PDF launched a PowerShell script via embedded macro.",
+    "Key Finding": "Macro executed PowerShell to download a second-stage loader from a compromised site.",
+    "Chain of Custody": "Extracted PDF, analyzed with pdfid and pdf-parser. Network traffic captured via Wireshark.",
+    "Blockchain Evidence": "N/A",
+    "Tools Used": "pdf-parser, Wireshark, CyberChef",
+    "Tags": "IR, Phishing, PDF, PowerShell",
+    "Analyst Report Link": "https://example.com/pdf-phishing-ir",
+    "Investigation Date": "2025-07-03"
+  }
+]
