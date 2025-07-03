@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>個人作品集首頁</title>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   個人作品集首頁
+  </title>
   <style>
-    body {
+   body {
       background-color: #121212;
       color: #f0f0f0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,25 +53,78 @@
       transform: scale(1.05);
     }
   </style>
-</head>
-<body>
-  <h1 id="title">My Cybersecurity Portfolio</h1>
+ </head>
+ <body>
+  <h1 id="title">
+   My Cybersecurity Portfolio
+  </h1>
   <div class="lang-toggle">
-    <button onclick="setLang('zh')">中文</button>
-    <button onclick="setLang('en')">English</button>
+   <button onclick="setLang('zh')">
+    中文
+   </button>
+   <button onclick="setLang('en')">
+    English
+   </button>
   </div>
   <div class="nav-cards">
-    <a href="malware.html"><span data-zh="👾<br>惡意程式分析紀錄" data-en="👾<br>Malware Analysis">👾<br>惡意程式分析紀錄</span></a>
-    <a href="pentest.html"><span data-zh="🔐<br>滲透實戰筆記" data-en="🔐<br>Web Pentest Notes">🔐<br>滲透實戰筆記</span></a>
-    <a href="tools.html"><span data-zh="💻<br>工具開發作品" data-en="💻<br>Tool Development">💻<br>工具開發作品</span></a>
-    <a href="certs.html"><span data-zh="📜<br>考過的證照" data-en="📜<br>Certifications">📜<br>考過的證照</span></a>
-    <a href="courses.html"><span data-zh="📚<br>技術進修歷程" data-en="📚<br>Study Tracker">📚<br>技術進修歷程</span></a>
-    <a href="teaching.html"><span data-zh="🎓<br>我的講課經歷" data-en="🎓<br>Teaching Experience">🎓<br>我的講課經歷</span></a>
-    <a href="talks.html"><span data-zh="🎤<br>歷年資安演講" data-en="🎤<br>Security Talks">🎤<br>歷年資安演講</span></a>
+   <a href="malware.html">
+    <span data-en="👾&lt;br&gt;Malware Analysis" data-zh="👾&lt;br&gt;惡意程式分析紀錄">
+     👾
+     <br/>
+     惡意程式分析紀錄
+    </span>
+   </a>
+   <a href="pentest.html">
+    <span data-en="🔐&lt;br&gt;Web Pentest Notes" data-zh="🔐&lt;br&gt;滲透實戰筆記">
+     🔐
+     <br/>
+     滲透實戰筆記
+    </span>
+   </a>
+   <a href="tools.html">
+    <span data-en="💻&lt;br&gt;Tool Development" data-zh="💻&lt;br&gt;工具開發作品">
+     💻
+     <br/>
+     工具開發作品
+    </span>
+   </a>
+   <a href="certs.html">
+    <span data-en="📜&lt;br&gt;Certifications" data-zh="📜&lt;br&gt;考過的證照">
+     📜
+     <br/>
+     考過的證照
+    </span>
+   </a>
+   <a href="courses.html">
+    <span data-en="📚&lt;br&gt;Study Tracker" data-zh="📚&lt;br&gt;技術進修歷程">
+     📚
+     <br/>
+     技術進修歷程
+    </span>
+   </a>
+   <a href="teaching.html">
+    <span data-en="🎓&lt;br&gt;Teaching Experience" data-zh="🎓&lt;br&gt;我的講課經歷">
+     🎓
+     <br/>
+     我的講課經歷
+    </span>
+   </a>
+   <a href="talks.html">
+    <span data-en="🎤&lt;br&gt;Security Talks" data-zh="🎤&lt;br&gt;歷年資安演講">
+     🎤
+     <br/>
+     歷年資安演講
+    </span>
+   </a>
+   <a href="dfir.html">
+    <span data-en="🧪&lt;br&gt;Digital Forensics &amp; Investigation" data-zh="🧪&lt;br&gt;數位鑑識與事件調查">
+     🧪
+Digital Forensics &amp; Investigation
+    </span>
+   </a>
   </div>
-
   <script>
-    function setLang(lang) {
+   function setLang(lang) {
       document.getElementById('title').innerText = lang === 'zh' ? '個人作品集' : 'My Cybersecurity Portfolio';
       document.querySelectorAll('.nav-cards span').forEach(span => {
         span.innerHTML = span.getAttribute('data-' + lang);
@@ -78,5 +132,5 @@
     }
   setLang('en');
   </script>
-</body>
+ </body>
 </html>
