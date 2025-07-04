@@ -10,6 +10,16 @@
     "Record Link": "https://example.com/record/2"
   },
   {
+    "Title": "Practical Industrial Control System Penetration Testing",
+    "Type": "Course",
+    "Topic": "Blue Team - Threat Hunting",
+    "Platform / Publisher": "Udemy",
+    "Completion Date": "2025-07",
+    "Key Learnings": "Covering threat profiling, malware analysis, and frameworks like MITRE ATT&CK and the Cyber Kill Chain",
+    "Tools / Technologies": "MITRE ATT&CK, Metasploit, NMAP",
+    "Record Link": ""
+  },
+  {
     "Title": "Security Monitoring with Wazuh",
     "Type": "Book",
     "Topic": "Blue Team - SOC",
