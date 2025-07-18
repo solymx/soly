@@ -1,5 +1,15 @@
 [
   {
+    "Title": "Cyber Fire Foundry 2025-2 Malware Analysis 2",
+    "Type": "Course",
+    "Topic": "Blue Team - Malware Analysis",
+    "Platform / Publisher": "Cyber Fire Foundry",
+    "Completion Date": "2025-10",
+    "Key Learnings": "Advanced - Examine malicious software to discover capabilities, methods, and more.",
+    "Tools / Technologies": "IDA, x64dbg",
+    "Record Link": "./data/2025/10/CyberFire/README.md"
+  },
+  {
     "Title": "SOC200: Foundational Security Operations and Defensive Analysis",
     "Type": "Course",
     "Topic": "Blue Team - SOC",
